@@ -10,6 +10,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+                    <br>
+                    <a href="{{ route('students.create') }}">Add New Student</a>
+                    <br>
+                    <a href="{{ route('students.index') }}">View Students</a>
                 </div>
             </div>
         </div>

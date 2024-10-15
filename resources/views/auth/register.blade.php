@@ -9,11 +9,32 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+         <!-- Surname -->
+         <div>
+            <x-input-label for="surname" :value="__('Surname')" />
+            <x-text-input id="surname" class="block mt-1 w-full" type="text" name="surname" :value="old('surname')" required autofocus autocomplete="surname" />
+            <x-input-error :messages="$errors->get('surname')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- School (Dropdown) -->
+           <div class="mt-4">
+            <x-input-label for="school_id" :value="__('School')" />
+            <select id="school_id" name="school_id" class="block mt-1 w-full" required>
+                <option value="">{{ __('Choose a school') }}</option>
+                @foreach ($schools as $school)
+                    <option value="{{ $school->id }}" {{ old('school_id') == $school->id ? 'selected' : '' }}>
+                        {{ $school->nameSchool }}
+                    </option>
+                @endforeach
+            </select>
+            <x-input-error :messages="$errors->get('school_id')" class="mt-2" />
         </div>
 
         <!-- Password -->
