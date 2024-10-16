@@ -8,7 +8,7 @@
 <body>
     <h1>Students List</h1>
 
-        <!-- Filter buttons -->
+
         <div class="mb-4 text-center">
             <a href="{{ route('students.filter', ['classNumber' => 5]) }}" class="btn btn-primary">
                 {{ __('Show Class 5 Students') }}
@@ -47,8 +47,7 @@
                     <td>{{ $student->emailStudent }}</td>
                     <td>{{ $student->classNumber }}</td>
                     <td>{{ $student->className }}</td>
-                    <td>{{ $student->school->nameSchool }}</td> <!-- assuming there is a relationship with School model -->
-                </tr>
+                    <td>{{ $student->school->nameSchool }}</td>
             @endforeach
         </tbody>
     </table>

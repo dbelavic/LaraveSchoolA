@@ -11,9 +11,19 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                     <br>
-                    <a href="{{ route('students.create') }}">Add New Student</a>
+                    <a href="{{ route('students.create') }}" class="btn btn-primary">Dodaj učenika</a>
                     <br>
-                    <a href="{{ route('students.index') }}">View Students</a>
+                    <a href="{{ route('students.index') }}" class="btn btn-secondary">Popis svih učenika</a>
+                    <br>
+                    <a href="{{ route('activities.create') }}" class="btn btn-primary">Dodaj novu aktivnost</a>
+                    <br>
+                    <a href="{{ route('activities.index') }}" class="btn btn-secondary">Pregled svih aktivnosti</a>
+                    <br>
+                    <a href="{{ route('attendance.create') }}" class="btn btn-primary">Dodaj prisutnost učenika</a>
+                    <br>
+                    <a href="{{ route('attendance.index') }}" class="btn btn-secondary">Pregled prisutnosti učenika</a>
+
+
                 </div>
             </div>
         </div>

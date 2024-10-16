@@ -15,9 +15,9 @@ class StudentFactory extends Factory
             'nameStudent' => $this->faker->firstName,
             'surnameStudent' => $this->faker->lastName,
             'emailStudent' => $this->faker->unique()->safeEmail,
-            'classNumber' => $this->faker->randomElement([5, 6, 7, 8]),  // Razredi od 5 do 8
-            'className' => $this->faker->randomElement(['a', 'b']),      // Razredi 'a' i 'b'
-            'school_id' => 1  // Pretpostavljamo da je school_id = 1
+            'classNumber' => $this->faker->randomElement([5, 6, 7, 8]),
+            'className' => $this->faker->randomElement(['a', 'b']),
+            'school_id' => 1
         ];
     }
 }

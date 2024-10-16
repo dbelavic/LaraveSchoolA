@@ -81,6 +81,15 @@ Change COLUMN created_at_activitiy created_at_activity TIMESTAMP DEFAULT CURRENT
 select * from students;
 
 -- umetanje podataka --- 
+Insert into Schools 
+(nameSchool)
+Values
+('OŠ Ludina'),
+('OŠ Popovača'), 
+('OŠ Zorke Sever'); 
+
+Select * from users ;
+
 INSERT INTO students 
 (nameStudent, surnameStudent, emailStudent, classNumber, className, schoolStudent)
 VALUES
@@ -148,3 +157,7 @@ join students as st on att.StudentId = st.idStudent
 where ac.idActivity = 2
 order by dateA asc; 
 
+select * from students;
+
+Use laravelschoola; 
+drop table table_attendance; 

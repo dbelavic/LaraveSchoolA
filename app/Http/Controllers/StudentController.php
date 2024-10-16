@@ -40,7 +40,7 @@ class StudentController extends Controller
     {
 
         $schools = School::all();
-        // Proslijedi ih viewu za registraciju
+
         return view('students.create', compact('schools'));
     }
 
